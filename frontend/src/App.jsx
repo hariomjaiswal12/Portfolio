@@ -26,7 +26,7 @@ function App() {
 
   return (
     <Router>
-      <div className="relative min-h-screen bg-background text-foreground antialiased selection:bg-primary/30 selection:text-white overflow-hidden">
+      <div className="relative min-h-screen bg-background text-foreground antialiased selection:bg-primary/30 selection:text-white overflow-x-hidden">
         {/* Global Interactive Elements */}
         <CustomCursor />
         <ParticleBackground />

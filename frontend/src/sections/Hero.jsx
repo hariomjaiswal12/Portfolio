@@ -39,10 +39,10 @@ const Hero = ({ onOpenResume }) => {
   return (
     <section
       id="hero"
-      className="relative min-h-[92vh] flex flex-col items-center justify-center px-6 pt-28 pb-16 overflow-hidden bg-ambient-grid"
+      className="relative min-h-[92vh] flex flex-col items-center justify-center px-4 sm:px-6 pt-24 sm:pt-28 pb-14 sm:pb-16 overflow-hidden bg-ambient-grid"
     >
       {/* Radial Gradient Spotlight */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-primary/10 blur-[120px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(600px,80vw)] h-[min(400px,60vw)] bg-primary/10 blur-[120px] rounded-full pointer-events-none -z-10" />
 
       <div className="max-w-4xl mx-auto text-center space-y-8 z-10">
         {/* Status Pill Badge */}
@@ -50,7 +50,7 @@ const Hero = ({ onOpenResume }) => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-xs font-mono text-emerald-400 backdrop-blur-md shadow-glass"
+          className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-[10px] sm:text-xs font-mono text-emerald-400 backdrop-blur-md shadow-glass"
         >
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
           <span>AVAILABLE FOR OPPORTUNITIES</span>
@@ -62,7 +62,7 @@ const Hero = ({ onOpenResume }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold text-white tracking-tight leading-none"
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold text-white tracking-tight leading-none break-words"
           >
             Hariom <span className="text-gradient-accent">Jaiswal</span>
           </motion.h1>
@@ -72,11 +72,11 @@ const Hero = ({ onOpenResume }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="h-10 flex items-center justify-center text-lg sm:text-2xl font-mono text-primary/90 font-medium"
+            className="min-h-[2.5rem] flex items-center justify-center text-base sm:text-xl md:text-2xl font-mono text-primary/90 font-medium px-2 text-center leading-relaxed"
           >
-            <span className="text-white/40 mr-2">&gt;</span>
-            <span>{displayedText}</span>
-            <span className="w-2 h-5 bg-primary ml-1 animate-pulse" />
+            <span className="text-white/40 mr-2 shrink-0">&gt;</span>
+            <span className="break-words">{displayedText}</span>
+            <span className="w-2 h-5 bg-primary ml-1 animate-pulse shrink-0" />
           </motion.div>
         </div>
 
@@ -112,15 +112,15 @@ const Hero = ({ onOpenResume }) => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
-          className="flex flex-wrap justify-center items-center gap-4 pt-4"
+          className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 pt-4"
         >
-          <a href="#projects">
-            <Button variant="primary" size="lg" icon={<FaCode />}>
+          <a href="#projects" className="w-full sm:w-auto">
+            <Button variant="primary" size="lg" icon={<FaCode />} className="w-full sm:w-auto">
               Explore Projects
             </Button>
           </a>
-          <a href="#contact">
-            <Button variant="outline" size="lg">
+          <a href="#contact" className="w-full sm:w-auto">
+            <Button variant="outline" size="lg" className="w-full sm:w-auto">
               Let's Connect
             </Button>
           </a>
@@ -130,6 +130,7 @@ const Hero = ({ onOpenResume }) => {
               size="lg"
               onClick={onOpenResume}
               icon={<FaFileAlt className="text-primary" />}
+              className="w-full sm:w-auto"
             >
               Resume
             </Button>
@@ -141,24 +142,24 @@ const Hero = ({ onOpenResume }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.6 }}
-          className="flex justify-center items-center gap-6 pt-4 text-muted"
+          className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 pt-4 text-muted"
         >
           <a
             href="https://github.com/hariomjaiswal12"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-white transition-colors flex items-center gap-2 text-xs font-mono"
+            className="hover:text-white transition-colors flex items-center gap-2 text-[11px] sm:text-xs font-mono text-center"
           >
-            <FaGithub size={16} /> github.com/hariomjaiswal12
+            <FaGithub size={16} className="shrink-0" /> github.com/hariomjaiswal12
           </a>
-          <span className="w-1 h-1 rounded-full bg-white/20" />
+          <span className="hidden sm:block w-1 h-1 rounded-full bg-white/20" />
           <a
             href="https://linkedin.com/in/hariomjaiswal12"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-white transition-colors flex items-center gap-2 text-xs font-mono"
+            className="hover:text-white transition-colors flex items-center gap-2 text-[11px] sm:text-xs font-mono text-center"
           >
-            <FaLinkedin size={16} /> linkedin.com/in/hariomjaiswal12
+            <FaLinkedin size={16} className="shrink-0" /> linkedin.com/in/hariomjaiswal12
           </a>
         </motion.div>
       </div>

@@ -20,7 +20,22 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
+  min-width: 320px;
   overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a, button, input, textarea {
+  -webkit-tap-highlight-color: transparent;
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -60,7 +60,7 @@ const About = ({ onOpenResume }) => {
           </div>
 
           {/* Quick Metrics Grid */}
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {stats.map((stat, idx) => (
               <motion.div
                 key={idx}
@@ -68,11 +68,11 @@ const About = ({ onOpenResume }) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="glass-card p-4 rounded-xl border border-white/5 text-center space-y-1"
+                className="glass-card p-4 rounded-xl border border-white/5 text-center space-y-1 min-w-0"
               >
                 <div className="flex justify-center text-base mb-1">{stat.icon}</div>
                 <div className="text-2xl md:text-3xl font-display font-bold text-white">{stat.value}</div>
-                <div className="text-[11px] font-mono text-muted">{stat.label}</div>
+                <div className="text-[11px] font-mono text-muted break-words">{stat.label}</div>
               </motion.div>
             ))}
           </div>

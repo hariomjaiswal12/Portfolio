@@ -101,12 +101,12 @@ const Projects = () => {
     >
       <div className="space-y-10">
         {/* Filter Bar */}
-        <div className="flex flex-wrap justify-center gap-2">
+        <div className="flex flex-wrap justify-center gap-2 pb-1 overflow-x-auto">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 text-xs font-mono rounded-full border transition-all duration-300 ${
+              className={`px-4 py-2 text-xs font-mono rounded-full border transition-all duration-300 whitespace-nowrap ${
                 activeCategory === cat
                   ? 'bg-primary text-white border-primary shadow-glow'
                   : 'bg-white/[0.03] text-muted border-white/10 hover:text-white hover:border-white/20'
@@ -118,7 +118,7 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
           <AnimatePresence>
             {filteredProjects.map((project) => (
               <motion.div

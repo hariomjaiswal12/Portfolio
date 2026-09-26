@@ -37,10 +37,10 @@ const Contact = () => {
       subheading="Have an opportunity, project, or collaboration in mind? Drop a message below."
       label="// 08. CONTACT"
     >
-      <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-10 items-start">
         {/* Left Column: Direct Info Cards */}
         <div className="lg:col-span-5 space-y-6">
-          <TiltCard className="p-7 space-y-6">
+          <TiltCard className="p-5 sm:p-7 space-y-6">
             <h3 className="text-xl font-display font-bold text-white">
               Contact Channels
             </h3>
@@ -53,12 +53,12 @@ const Contact = () => {
                 href="mailto:omjaiswal942@gmail.com"
                 className="flex items-center gap-4 p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-primary/50 transition-colors group"
               >
-                <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center text-primary group-hover:scale-110 transition-transform shrink-0">
                   <FaEnvelope size={18} />
                 </div>
-                <div className="space-y-0.5 text-left">
+                <div className="space-y-0.5 text-left min-w-0">
                   <span className="text-[11px] font-mono text-muted uppercase block">Email Address</span>
-                  <span className="text-sm font-mono text-white font-medium group-hover:text-primary transition-colors">omjaiswal942@gmail.com</span>
+                  <span className="block text-sm font-mono text-white font-medium group-hover:text-primary transition-colors break-all">omjaiswal942@gmail.com</span>
                 </div>
               </a>
 
@@ -66,22 +66,22 @@ const Contact = () => {
                 href="tel:+918770180357"
                 className="flex items-center gap-4 p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-emerald-400/50 transition-colors group"
               >
-                <div className="w-10 h-10 rounded-lg bg-emerald-400/10 border border-emerald-400/30 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform">
+                <div className="w-10 h-10 rounded-lg bg-emerald-400/10 border border-emerald-400/30 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform shrink-0">
                   <FaPhone size={18} />
                 </div>
-                <div className="space-y-0.5 text-left">
+                <div className="space-y-0.5 text-left min-w-0">
                   <span className="text-[11px] font-mono text-muted uppercase block">Phone Contact</span>
-                  <span className="text-sm font-mono text-white font-medium group-hover:text-emerald-400 transition-colors">+91-8770180357</span>
+                  <span className="block text-sm font-mono text-white font-medium group-hover:text-emerald-400 transition-colors break-all">+91-8770180357</span>
                 </div>
               </a>
 
               <div className="flex items-center gap-4 p-3.5 rounded-xl bg-white/[0.03] border border-white/10">
-                <div className="w-10 h-10 rounded-lg bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-cyan-400">
+                <div className="w-10 h-10 rounded-lg bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-cyan-400 shrink-0">
                   <FaMapMarkerAlt size={18} />
                 </div>
-                <div className="space-y-0.5 text-left">
+                <div className="space-y-0.5 text-left min-w-0">
                   <span className="text-[11px] font-mono text-muted uppercase block">Location</span>
-                  <span className="text-sm font-mono text-white font-medium">Indore, Madhya Pradesh, India</span>
+                  <span className="block text-sm font-mono text-white font-medium break-words">Indore, Madhya Pradesh, India</span>
                 </div>
               </div>
             </div>
@@ -92,7 +92,7 @@ const Contact = () => {
         <div className="lg:col-span-7">
           <motion.form
             onSubmit={handleSubmit}
-            className="glass-card p-8 md:p-10 rounded-2xl border border-white/10 space-y-6 relative overflow-hidden"
+            className="glass-card p-5 sm:p-8 md:p-10 rounded-2xl border border-white/10 space-y-6 relative overflow-hidden"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
